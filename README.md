@@ -38,24 +38,33 @@ make
 ```
 
 # Usage examples
+Enter to rl78flash folder
+```
+cd rl78flash
+```
+
+Or execute with full command
+```
+pi@raspberrypi:~ $ rl78flash/rl78flash <command>
+```
 
 Show information about a target MCU and write a mot-image to it
 ```
-$ rl78flash -viva /dev/ttyUSB0 firmware.mot
+$ ./rl78flash -viva /dev/ttyUSB0 firmware.mot
 ```
 
 Write an RL78/G10 part that have 2k of flash, verify and reset the MCU
 ```
-$ rl78g10flash -vvwcr /dev/ttyUSB0 firmware.mot 2k
+$ ./rl78g10flash -vvwcr /dev/ttyUSB0 firmware.mot 2k
 ```
 
 See also output from
 ```
-$ rl78flash -h
+$ ./rl78flash -h
 ```
 and
 ```
-$ rl78g10flash -h
+$ ./rl78g10flash -h
 ```
 
 ### Rewrite an MCU with the RESET pin acting as a GPIO
