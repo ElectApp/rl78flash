@@ -38,19 +38,19 @@ make
 ```
 
 # Usage examples
-Enter to rl78flash folder
+Enter to rl78flash folder and follow with example below
 ```
 cd rl78flash
 ```
 
-Or execute with full command
+Or execute from home folder
 ```
-pi@raspberrypi:~ $ rl78flash/rl78flash <command>
+$ rl78flash/rl78flash <command of example below>
 ```
 
-Show information about a target MCU and write a mot-image to it
+Show information about a target MCU, erase data flash and write a mot-image to it with the single-wire UART, Reset by RTS  
 ```
-$ ./rl78flash -viva /dev/ttyUSB0 firmware.mot
+$ ./rl78flash -viva -nm3 /dev/ttyUSB0 firmware.mot
 ```
 
 Write an RL78/G10 part that have 2k of flash, verify and reset the MCU
@@ -82,13 +82,13 @@ Step-by-step procedure:
 5. press any key;
 6. that's all.
 
-Example: Erase RPBRL78G14 with RESET acting as a GPIO
+Example: Erase R5F1056A with RESET acting as a GPIO
 ```
 $ ./rl78flash -dive -nm3 /dev/ttyUSB0
 Turn MCU's power on and press any key...
-Device: R5F104LE
-Code size: 64 kB
-Data size: 4 kB
+Device: R5F1056A
+Code size: 16 kB
+Data size: 2 kB
 Erase
 
 $
